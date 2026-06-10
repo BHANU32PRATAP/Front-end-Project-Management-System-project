@@ -1,0 +1,121 @@
+<div class="min-h-screen bg-slate-100 flex items-center justify-center p-2 sm:p-6 lg:p-8">
+    <div class="w-full max-w-4xl bg-white rounded-3xl shadow-2xl overflow-hidden grid lg:grid-cols-2 animate-[fadeIn_0.8s_ease-out]">
+
+
+        <div class="p-3 sm:p-10 lg:p-10 flex flex-col justify-center animate-[slideLeft_0.8s_ease-out]">
+            <!-- Logo -->
+            <div class="text-center mb-4">
+                <div class="w-12 h-12 mx-auto rounded-2xl bg-cyan-700 flex items-center justify-center shadow-lg animate-bounce">
+                    <i class="pi pi-briefcase text-white text-1xl"></i>
+                </div>
+
+                <h2 class="mt-3 text-3xl font-bold text-slate-800">
+                    Sign In
+                </h2>
+
+                <p class="text-slate-500 mt-2">
+                    Enter your credentials to access your dashboard
+                </p>
+            </div>
+
+            <!-- Form -->
+            <form class="space-y-3" (ngSubmit)="onLogin()">
+
+                <!-- Email -->
+                <div>
+                    <label class="block text-sm font-medium text-slate-700 mb-1">
+                        Email Address
+                    </label>
+
+                    <div class="relative">
+                        <input [(ngModel)]="loginForm.email" name="email" type="email" placeholder="Enter your email" class="w-full h-11 sm:h-12 pl-12 pr-4 rounded-xl border border-slate-200 bg-white focus:outline-none focus:ring-2 focus:ring-cyan-600 focus:border-transparent transition"
+                        />
+
+                        <i class="pi pi-envelope absolute left-4 top-1/2 -translate-y-1/2 text-slate-400"></i>
+                    </div>
+                </div>
+
+                <!-- Password -->
+                <div>
+                    <label class="block text-sm font-medium text-slate-700 mb-1">
+                        Password
+                    </label>
+
+                    <div class="relative">
+                        <input [(ngModel)]="loginForm.password" name="password" [type]="showPassword ? 'text' :'password'" placeholder="Enter your password" class="w-full h-11 sm:h-12 pl-12 pr-4 rounded-xl border border-slate-200 bg-white focus:outline-none focus:ring-2 focus:ring-cyan-600 focus:border-transparent transition"
+                        />
+
+                        <i class="pi pi-lock absolute left-4 top-1/2 -translate-y-1/2 text-slate-400"></i>
+                        <i (click)="togglePassword()" [class]="showPassword ?'pi pi-eye-slash': 'pi pi-eye'" class="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 cursor-pointer"></i>
+                    </div>
+                </div>
+
+                <!-- Remember -->
+                <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+
+                    <a class="text-sm font-medium text-cyan-700 hover:text-cyan-800">
+                        Forgot Password?
+                    </a>
+                </div>
+
+                <!-- Button -->
+                <button type="submit" class="w-full h-12 sm:h-14 rounded-xl bg-cyan-700 hover:bg-cyan-800 hover:scale-[1.02] active:scale-95 transition-all duration-300">
+                    Sign In
+                </button>
+
+            </form>
+
+            <!-- Footer -->
+            <div class="mt-4 text-center">
+                <p class="text-sm text-slate-500">
+                    Don’t have an account?
+                    <a routerLink="/register" class="text-cyan-700 font-semibold hover:text-cyan-800">
+                        Create Account
+                    </a>
+                </p>
+            </div>
+
+        </div>
+
+        <!-- Left Side -->
+        <div class="hidden lg:flex flex-col justify-center bg-gradient-to-br from-cyan-700 to-slate-900 p-12 text-white relative overflow-hidden animate-[slideRight_1s_ease-out]">
+            <div class="absolute inset-0 opacity-10">
+                <div class="absolute top-10 left-10 w-40 h-40 rounded-full bg-white animate-pulse"></div>
+                <div class="absolute bottom-10 right-10 w-56 h-56 rounded-full bg-white animate-pulse"></div>
+            </div>
+
+            <div class="relative z-10">
+                <h1 class="text-3xl font-bold leading-tight">
+                    Welcome Back to <br /> Project Management System
+                </h1>
+
+                <p class="mt-3 text-slate-200 text-lg leading-relaxed">
+                    Manage projects, teams, deadlines, and productivity in one modern dashboard.
+                </p>
+
+                <div class="mt-6 space-y-5">
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center">
+                            <i class="pi pi-briefcase text-xl"></i>
+                        </div>
+                        <span class="text-lg">Manage Projects Efficiently</span>
+                    </div>
+
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center">
+                            <i class="pi pi-users text-xl"></i>
+                        </div>
+                        <span class="text-lg">Collaborate with Teams</span>
+                    </div>
+
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center">
+                            <i class="pi pi-chart-line text-xl"></i>
+                        </div>
+                        <span class="text-lg">Track Performance & Progress</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

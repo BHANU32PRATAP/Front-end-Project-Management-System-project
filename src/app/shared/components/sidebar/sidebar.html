@@ -1,0 +1,29 @@
+<aside class="bg-white h-full border-r border-slate-200 shadow-xl flex flex-col flex-shrink-0">
+
+    <!-- Logo -->
+    <div class="h-20 flex items-center justify-between px-6 border-b border-slate-200">
+        <h1 class="text-2xl font-bold text-slate-800">
+            Dashboard
+        </h1>
+
+        <button class="lg:hidden w-10 h-10 rounded-xl hover:bg-slate-100 flex items-center justify-center">
+            ✕
+        </button>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="flex-1 overflow-y-auto px-4 py-6 space-y-2">
+        <a *ngFor="let item of sideBar" [routerLink]="item.route" routerLinkActive="bg-cyan-700 text-white " [routerLinkActiveOptions]="{exact:true}" class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-700 font-medium  transition-all duration-200 cursor-pointer">
+
+            <span>{{ item.icon }}</span>
+            <span>{{ item.routingName }}</span>
+        </a>
+    </nav>
+
+    <!-- Footer -->
+    <div class="p-4 border-t border-slate-200">
+        <button class="w-full h-12 rounded-2xl bg-red-500 hover:bg-red-600 text-white font-medium transition">
+            Logout
+        </button>
+    </div>
+</aside>

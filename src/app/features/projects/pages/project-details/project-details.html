@@ -1,0 +1,739 @@
+<div class="min-h-screen">
+
+
+    <header class="relative overflow-hidden rounded-[15px] bg-gradient-to-br from-slate-950 via-slate-900 to-slate-800 p-6  shadow-2xl">
+        <button routerLink="/projects-list" class="flex items-center gap-2 text-slate-300 hover:text-white transition">
+            <i class="pi pi-arrow-left"></i>
+
+            <span class="font-medium">
+                Back to Projects
+            </span>
+        </button>
+
+
+        <div class="absolute -top-32 -right-32 h-96 w-96 rounded-full bg-cyan-500/20 blur-3xl"></div>
+
+        <div class="absolute -bottom-32 -left-32 h-96 w-96 rounded-full bg-blue-500/20 blur-3xl"></div>
+
+        <div class="relative z-10">
+
+            <div class="grid grid-cols-1 xl:grid-cols-[1.5fr_1fr] gap-8 items-center">
+
+                <!-- LEFT CONTENT -->
+
+                <div>
+
+                    <div class="flex flex-wrap gap-3 mb-3">
+
+                        <span class="px-4 py-2 rounded-full bg-green-500/15 border border-green-500/20 text-green-300 text-sm">
+                            ● Active Project
+                        </span>
+
+                        <span class="px-4 py-2 rounded-full bg-cyan-500/15 border border-cyan-500/20 text-cyan-300 text-sm">
+                            High Priority
+                        </span>
+
+                        <span class="px-4 py-2 rounded-full bg-purple-500/15 border border-purple-500/20 text-purple-300 text-sm">
+                            Enterprise Client
+                        </span>
+
+                    </div>
+
+                    <h1 class="text-3xl md:text-5xl font-bold text-white leading-tight">
+                        Enterprise CRM
+                        <span class="text-cyan-400">
+                            Development
+                        </span>
+                    </h1>
+
+                    <p class="mt-3 text-slate-300 text-base md:text-lg leading-8 max-w-3xl">
+                        Full-stack CRM platform for managing leads, customers, sales pipelines, projects, tasks, analytics and team collaboration.
+                    </p>
+
+                    <div class="flex flex-wrap gap-4 mt-4">
+
+                        <button class="px-6 h-12 cursor-pointer rounded-xl bg-cyan-600 text-white font-medium hover:bg-cyan-700 transition">
+                            View Project
+                        </button>
+
+                        <button class="px-6 h-12 cursor-pointer rounded-xl border border-slate-600 text-slate-200 hover:bg-white/5 transition">
+                            Export Report
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <!-- RIGHT KPI CARDS -->
+
+                <div class="grid grid-cols-2 gap-4">
+
+                    <div class="h-32 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-xl flex flex-col items-center justify-center text-center">
+
+                        <div class="text-2xl mb-2">💰</div>
+
+                        <p class="text-slate-400 text-xs uppercase tracking-wider">
+                            Budget
+                        </p>
+
+                        <h3 class="text-2xl font-bold text-white mt-1">
+                            ₹4.5L
+                        </h3>
+
+                    </div>
+
+                    <div class="h-32 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-xl flex flex-col items-center justify-center text-center">
+
+                        <div class="text-2xl mb-2">📈</div>
+
+                        <p class="text-slate-400 text-xs uppercase tracking-wider">
+                            Progress
+                        </p>
+
+                        <h3 class="text-2xl font-bold text-green-400 mt-1">
+                            72%
+                        </h3>
+
+                    </div>
+
+                    <div class="h-32 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-xl flex flex-col items-center justify-center text-center">
+
+                        <div class="text-2xl mb-2">👥</div>
+
+                        <p class="text-slate-400 text-xs uppercase tracking-wider">
+                            Team
+                        </p>
+
+                        <h3 class="text-2xl font-bold text-white mt-1">
+                            8
+                        </h3>
+
+                    </div>
+
+                    <div class="h-32 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-xl flex flex-col items-center justify-center text-center">
+
+                        <div class="text-2xl mb-2">⏰</div>
+
+                        <p class="text-slate-400 text-xs uppercase tracking-wider">
+                            Deadline
+                        </p>
+
+                        <h3 class="text-sm font-bold text-red-400 mt-1">
+                            30 Sep 2026
+                        </h3>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- Stats -->
+    <section class=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mt-3 mb-3">
+        <div class="bg-white p-5 rounded-2xl shadow-sm">
+            <p class="text-slate-500 text-sm">Budget</p>
+            <h3 class="text-2xl font-bold text-slate-800 mt-2">₹4,50,000</h3>
+        </div>
+
+        <div class="bg-white p-5 rounded-2xl shadow-sm">
+            <p class="text-slate-500 text-sm">Progress</p>
+            <h3 class="text-2xl font-bold text-blue-600 mt-2">72%</h3>
+        </div>
+
+        <div class="bg-white p-5 rounded-2xl shadow-sm">
+            <p class="text-slate-500 text-sm">Team Members</p>
+            <h3 class="text-2xl font-bold text-slate-800 mt-2">8</h3>
+        </div>
+
+        <div class="bg-white p-5 rounded-2xl shadow-sm">
+            <p class="text-slate-500 text-sm">Deadline</p>
+            <h3 class="text-2xl font-bold text-red-500 mt-2">30 Sep 2026</h3>
+        </div>
+    </section>
+    <main class="grid grid-cols-1 xl:grid-cols-3 gap-6">
+
+        <!-- Left Section -->
+        <section class="xl:col-span-2 bg-white rounded-3xl shadow-lg p-6">
+
+            <div class="flex items-center justify-between mb-4">
+                <h2 class="text-2xl font-bold text-slate-800">
+                    Project Information
+                </h2>
+
+                <span class="px-4 py-2 rounded-full bg-green-100 text-green-700 font-medium">
+                    In Progress
+                </span>
+            </div>
+
+            <!-- Info Grid -->
+
+            <div class="grid md:grid-cols-2 xl:grid-cols-4 gap-5">
+
+                <div class="bg-slate-50 rounded-2xl p-5 text-center">
+                    <p class="text-slate-500 text-sm">Project ID</p>
+                    <h4 class="font-bold mt-2">PRJ-2026-001</h4>
+                </div>
+
+                <div class="bg-slate-50 rounded-2xl p-5 text-center">
+                    <p class="text-slate-500 text-sm">Type</p>
+                    <h4 class="font-bold mt-2">Web Application</h4>
+                </div>
+
+                <div class="bg-slate-50 rounded-2xl p-5 text-center">
+                    <p class="text-slate-500 text-sm">Start Date</p>
+                    <h4 class="font-bold mt-2">01 Jul 2026</h4>
+                </div>
+
+                <div class="bg-slate-50 rounded-2xl p-5 text-center">
+                    <p class="text-slate-500 text-sm">Deadline</p>
+                    <h4 class="font-bold mt-2">30 Sep 2026</h4>
+                </div>
+
+            </div>
+            <div class="grid md:grid-cols-2 gap-5 mt-5">
+
+                <a href="https://www.perplexity.ai/search/6c72a8a6-76a1-4f2f-a16e-ff78fc4c700c" target="_blank" class="px-6 h-12 flex items-center rounded-xl bg-cyan-600 text-white font-medium hover:bg-cyan-700 transition">
+                    <i class="pi pi-external-link mr-2"></i> Live Demo
+                </a>
+
+                <a href="https://github.com/BHANU32PRATAP" target="_blank" class="group px-6 h-12 flex items-center gap-3 rounded-xl border border-slate-600 bg-white/5 text-slate-200 hover:bg-white/10 hover:border-slate-500 transition-all duration-300">
+                    <i class="pi pi-github text-lg"></i>
+
+                    <span class="font-medium">
+                        Source Code
+                    </span>
+
+                    <i class="pi pi-arrow-up-right ml-auto opacity-0 group-hover:opacity-100 transition"></i>
+                </a>
+
+            </div>
+
+            <!-- Description -->
+
+            <div class="mt-5">
+
+                <h3 class="text-xl font-bold mb-3">
+                    Project Overview
+                </h3>
+
+                <p class="max-h-72 overflow-y-auto custom-scrollbar text-slate-600 leading-7 pr-2">
+                    The CRM system will provide lead management, employee management, task tracking, reporting, dashboard analytics, role-based access control, email notifications and customer communication features for enterprise-level business operations. The CRM system
+                    The CRM system will provide lead management, employee management, task tracking, reporting, dashboard analytics, role-based access control, email notifications and customer communication features for enterprise-level business operations.
+                    The CRM system will provide lead management, employee management, task tracking, reporting, dashboard analytics, role-based access control, email notifications and customer communication features for enterprise-level business operations.
+                    will provide lead management, employee management, task tracking, reporting, dashboard analytics, role-based access control, email notifications and customer communication features for enterprise-level business operations. will provide
+                    lead management, employee management, task tracking, reporting, dashboard analytics, role-based access control, email notifications and customer communication features for enterprise-level business operations. lead management, employee
+                    management, task tracking, reporting, dashboard analytics, role-based access control, email notifications and customer communication features for enterprise-level business operations. lead management, employee management, task tracking,
+                    reporting, dashboard analytics, role-based access control, email notifications and customer communication features for enterprise-level business operations.
+                </p>
+
+            </div>
+
+            <!-- Progress -->
+
+            <div class="mt-3">
+
+                <div class="flex justify-between mb-3">
+                    <span class="font-semibold">
+                        Development Progress
+                    </span>
+
+                    <span class="font-bold text-cyan-600">
+                        72%
+                    </span>
+                </div>
+
+                <div class="h-4 bg-slate-200 rounded-full overflow-hidden">
+
+                    <div class="h-full w-[72%] rounded-full bg-gradient-to-r from-cyan-500 to-blue-600">
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Right Section -->
+
+        <aside class="bg-white rounded-3xl shadow-lg p-6 h-fit">
+
+            <div class="text-center">
+
+                <img src="https://i.pravatar.cc/150?img=12" alt="Client" class="w-24 h-24 rounded-full mx-auto border-4 border-cyan-100">
+
+                <h2 class="text-xl font-bold mt-4">
+                    Michael Anderson
+                </h2>
+
+                <p class="text-slate-500">
+                    CEO - Anderson Technologies
+                </p>
+
+            </div>
+
+            <div class="border-t mt-6 pt-6 space-y-5">
+
+                <div>
+                    <p class="text-xs uppercase text-slate-400">
+                        Email
+                    </p>
+
+                    <p class="font-medium">
+                        michael@andersontech.com
+                    </p>
+                </div>
+
+                <div>
+                    <p class="text-xs uppercase text-slate-400">
+                        Phone
+                    </p>
+
+                    <p class="font-medium">
+                        +91 98765 43210
+                    </p>
+                </div>
+
+                <div>
+                    <p class="text-xs uppercase text-slate-400">
+                        Company
+                    </p>
+
+                    <p class="font-medium">
+                        Anderson Technologies Pvt Ltd
+                    </p>
+                </div>
+
+                <div>
+                    <p class="text-xs uppercase text-slate-400">
+                        Location
+                    </p>
+
+                    <p class="font-medium">
+                        New Delhi, India
+                    </p>
+                </div>
+
+            </div>
+
+            <button class="w-full mt-8 h-12 rounded-xl bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-semibold hover:shadow-lg transition">
+                Contact Client
+            </button>
+
+        </aside>
+
+    </main>
+
+
+
+
+
+
+    <section class="grid grid-cols-1 xl:grid-cols-1 gap-6 mt-6">
+
+        <div class="bg-white rounded-3xl border border-slate-200 p-6">
+
+
+            <div class="flex items-center justify-between mb-6">
+
+                <div>
+                    <h2 class="text-2xl font-bold text-slate-900">
+                        Project Team
+                    </h2>
+
+                    <p class="text-sm text-slate-500 mt-1">
+                        Team members working on this project
+                    </p>
+                </div>
+
+                <div class="flex items-center gap-3">
+
+                    <span class="px-4 py-2 rounded-xl bg-cyan-50 text-cyan-700 text-sm font-medium">
+                        12 Members
+                    </span>
+
+                    <button routerLink="/project-team-list" class="text-cyan-600 font-medium hover:text-cyan-700 transition">
+                        See All →
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-5">
+
+                <div class="group border border-slate-200 rounded-3xl p-5 hover:border-cyan-300 hover:shadow-lg transition-all duration-300">
+
+                    <!-- Header -->
+
+                    <div class="flex items-center gap-4">
+
+                        <div class="h-16 w-16 rounded-2xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white flex items-center justify-center font-bold text-lg">
+                            BP
+                        </div>
+
+                        <div>
+
+                            <h3 class="font-semibold text-slate-900 text-lg">
+                                Bhanu Pratap
+                            </h3>
+
+                            <p class="text-sm text-slate-500">
+                                Project Manager
+                            </p>
+
+                        </div>
+                    </div>
+
+                    <!-- Stats -->
+
+                    <div class="mt-6 space-y-4">
+
+                        <div class="flex justify-between text-sm">
+
+                            <span class="text-slate-500">
+                                Assigned Tasks
+                            </span>
+
+                            <span class="font-semibold">
+                                8
+                            </span>
+
+                        </div>
+
+                        <div>
+
+                            <div class="flex justify-between text-sm mb-2">
+
+                                <span class="text-slate-500">
+                                    Progress
+                                </span>
+
+                                <span class="font-semibold text-green-600">
+                                    90%
+                                </span>
+
+                            </div>
+
+                            <div class="h-2 bg-slate-100 rounded-full overflow-hidden">
+
+                                <div class="h-full w-[90%] bg-gradient-to-r from-green-500 to-emerald-600 rounded-full">
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="flex justify-between text-sm">
+
+                            <span class="text-slate-500">
+                                Status
+                            </span>
+
+                            <span class="px-3 py-1 rounded-full bg-green-100 text-green-700 text-xs font-medium">
+                                Active
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="group border border-slate-200 rounded-3xl p-5 hover:border-cyan-300 hover:shadow-lg transition-all duration-300">
+
+                    <!-- Header -->
+
+                    <div class="flex items-center gap-4">
+
+                        <div class="h-16 w-16 rounded-2xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white flex items-center justify-center font-bold text-lg">
+                            BP
+                        </div>
+
+                        <div>
+
+                            <h3 class="font-semibold text-slate-900 text-lg">
+                                Bhanu Pratap
+                            </h3>
+
+                            <p class="text-sm text-slate-500">
+                                Project Manager
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Stats -->
+
+                    <div class="mt-6 space-y-4">
+
+                        <div class="flex justify-between text-sm">
+
+                            <span class="text-slate-500">
+                                Assigned Tasks
+                            </span>
+
+                            <span class="font-semibold">
+                                8
+                            </span>
+
+                        </div>
+
+                        <div>
+
+                            <div class="flex justify-between text-sm mb-2">
+
+                                <span class="text-slate-500">
+                                    Progress
+                                </span>
+
+                                <span class="font-semibold text-green-600">
+                                    90%
+                                </span>
+
+                            </div>
+
+                            <div class="h-2 bg-slate-100 rounded-full overflow-hidden">
+
+                                <div class="h-full w-[90%] bg-gradient-to-r from-green-500 to-emerald-600 rounded-full">
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="flex justify-between text-sm">
+
+                            <span class="text-slate-500">
+                                Status
+                            </span>
+
+                            <span class="px-3 py-1 rounded-full bg-green-100 text-green-700 text-xs font-medium">
+                                Active
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group border border-slate-200 rounded-3xl p-5 hover:border-cyan-300 hover:shadow-lg transition-all duration-300">
+                    <div class="flex items-center gap-4">
+                        <div class="h-16 w-16 rounded-2xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white flex items-center justify-center font-bold text-lg">
+                            BP
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-slate-900 text-lg">
+                                Bhanu Pratap
+                            </h3>
+                            <p class="text-sm text-slate-500">
+                                Project Manager
+                            </p>
+                        </div>
+                    </div>
+                    <div class="mt-6 space-y-4">
+                        <div class="flex justify-between text-sm">
+                            <span class="text-slate-500">
+                                Assigned Tasks
+                            </span>
+                            <span class="font-semibold">
+                                8
+                            </span>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-sm mb-2">
+                                <span class="text-slate-500">
+                                    Progress
+                                </span>
+                                <span class="font-semibold text-green-600">
+                                    90%
+                                </span>
+                            </div>
+
+                            <div class="h-2 bg-slate-100 rounded-full overflow-hidden">
+
+                                <div class="h-full w-[90%] bg-gradient-to-r from-green-500 to-emerald-600 rounded-full">
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="flex justify-between text-sm">
+
+                            <span class="text-slate-500">
+                                Status
+                            </span>
+
+                            <span class="px-3 py-1 rounded-full bg-green-100 text-green-700 text-xs font-medium">
+                                Active
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="bg-white rounded-3xl border border-slate-200 p-6">
+            <div class="flex items-center justify-between mb-6">
+                <h2 class="text-2xl font-bold">Project Tasks</h2>
+                <button class="h-11 px-5 rounded-xl bg-cyan-700 text-white hover:bg-cyan-800 focus:outline-none focus:ring-2 focus:ring-cyan-200">Add
+                    Task</button>
+            </div>
+
+            <div class="overflow-x-auto">
+                <table class="w-full text-sm">
+                    <thead>
+                        <tr class="border-b text-left">
+                            <th class="py-4">Task</th>
+                            <th class="py-4">Assigned To</th>
+                            <th class="py-4">Priority</th>
+                            <th class="py-4">Due Date</th>
+                            <th class="py-4">Status</th>
+                            <th class="py-4">Progress</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr class="border-b hover:bg-slate-50">
+                            <td class="py-4">Authentication Module</td>
+                            <td>Rahul Sharma</td>
+                            <td>
+                                <span class="px-3 py-1 rounded-full bg-red-100 text-red-600 text-xs">High</span>
+                            </td>
+                            <td>15 Aug 2026</td>
+                            <td>
+                                <span class="px-3 py-1 rounded-full bg-yellow-100 text-yellow-700 text-xs">In
+                                    Progress</span>
+                            </td>
+                            <td class="w-48">
+                                <div class="h-2 rounded-full bg-slate-100 overflow-hidden">
+                                    <div class="h-full w-[75%] bg-cyan-600 rounded-full"></div>
+                                </div>
+                                <span class="text-xs text-slate-500 mt-1 block">75%</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-3xl border p-6">
+            <h2 class="text-xl font-bold mb-6">Project Metrics</h2>
+            <div class="grid md:grid-cols-4 gap-5">
+                <div>
+                    <p class="text-slate-500">Velocity</p>
+                    <h3 class="text-3xl font-bold">42</h3>
+                </div>
+
+                <div>
+                    <p class="text-slate-500">Completion Rate</p>
+                    <h3 class="text-3xl font-bold">78%</h3>
+                </div>
+
+                <div>
+                    <p class="text-slate-500">Open Issues</p>
+                    <h3 class="text-3xl font-bold">12</h3>
+                </div>
+
+                <div>
+                    <p class="text-slate-500">Bug Count</p>
+                    <h3 class="text-3xl font-bold">5</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Additional sections -->
+    <section class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+        <div class="bg-white rounded-3xl border p-6">
+            <div class="flex justify-between items-center">
+                <h2 class="text-xl font-bold">Risk Assessment</h2>
+                <span class="px-4 py-2 rounded-full bg-yellow-100 text-yellow-700">Medium Risk</span>
+            </div>
+
+            <div class="mt-6 space-y-4">
+                <div class="rounded-2xl bg-red-50 border border-red-100 p-4">
+                    <h4 class="font-semibold text-red-700">API Integration Delay</h4>
+                    <p class="text-sm text-slate-600 mt-2">Backend endpoints are pending approval.</p>
+                </div>
+
+                <div class="rounded-2xl bg-yellow-50 border border-yellow-100 p-4">
+                    <h4 class="font-semibold text-yellow-700">Resource Availability</h4>
+                    <p class="text-sm text-slate-600 mt-2">One frontend developer is on leave.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-3xl border p-6">
+            <div class="flex justify-between">
+                <div>
+                    <h2 class="text-xl font-bold">Sprint #12</h2>
+                    <p class="text-slate-500">01 Aug - 15 Aug</p>
+                </div>
+                <span class="px-4 py-2 rounded-full bg-green-100 text-green-700">Active</span>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-5 mt-8">
+                <div>
+                    <p class="text-slate-500">Planned</p>
+                    <h3 class="text-3xl font-bold">25</h3>
+                </div>
+
+                <div>
+                    <p class="text-slate-500">Completed</p>
+                    <h3 class="text-3xl font-bold">18</h3>
+                </div>
+
+                <div>
+                    <p class="text-slate-500">Remaining</p>
+                    <h3 class="text-3xl font-bold">7</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+        <div class="bg-white rounded-3xl border p-6">
+            <h2 class="text-xl font-bold mb-6">Team Workload</h2>
+
+            <div class="space-y-5">
+                <div>
+                    <div class="flex justify-between mb-2">
+                        <span>Rahul Sharma</span>
+                        <span>90%</span>
+                    </div>
+
+                    <div class="h-3 bg-slate-100 rounded-full">
+                        <div class="h-full w-[90%] bg-red-500 rounded-full"></div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="flex justify-between mb-2">
+                        <span>Aman Kumar</span>
+                        <span>60%</span>
+                    </div>
+
+                    <div class="h-3 bg-slate-100 rounded-full">
+                        <div class="h-full w-[60%] bg-green-500 rounded-full"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-3xl border p-6">
+            <h2 class="text-xl font-bold mb-6">Deliverables</h2>
+            <div class="space-y-4 text-sm">
+                <div class="border rounded-2xl p-4 flex items-center gap-3">✅ Authentication Module</div>
+                <div class="border rounded-2xl p-4 flex items-center gap-3">✅ Dashboard Module</div>
+                <div class="border rounded-2xl p-4 flex items-center gap-3">⏳ Reports Module</div>
+                <div class="border rounded-2xl p-4 flex items-center gap-3">⏳ Notification Module</div>
+            </div>
+        </div>
+    </section>
+</div>

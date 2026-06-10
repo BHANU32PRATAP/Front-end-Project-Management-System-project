@@ -1,0 +1,55 @@
+:host {
+    display: block;
+}
+
+th {
+    font-size: 12px;
+    font-weight: 700;
+    padding: 15px;
+}
+
+input,
+select,
+td {
+    font-size: 13px;
+}
+
+span {
+    font-size: 12px;
+}
+
+.project-view-btn {
+    min-width: 66px;
+    padding: 0.3rem 0.5rem;
+    border-radius: 999px;
+    border: 1px solid transparent;
+    background: transparent;
+    color: #475569;
+    font-size: 0.8rem;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.project-view-btn:hover {
+    background: #e2e8f0;
+}
+
+.project-view-btn.active {
+    background: #0ea5e9;
+    border-color: #0ea5e9;
+    color: #fff;
+}
+
+@media (max-width: 1024px) {
+    th,
+    td {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 768px) {
+    .project-view-btn {
+        min-width: 72px;
+        font-size: 0.8rem;
+    }
+}

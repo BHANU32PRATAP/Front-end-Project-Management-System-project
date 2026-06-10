@@ -1,0 +1,176 @@
+<div class="min-h-screen bg-slate-100 flex items-center justify-center">
+
+    <div class="w-full max-w-6xl bg-white rounded-3xl shadow-2xl overflow-hidden grid lg:grid-cols-2">
+
+        <!-- Left Branding -->
+        <div class="hidden lg:flex flex-col justify-center bg-gradient-to-br from-cyan-700 to-slate-900 p-12 text-white relative overflow-hidden">
+
+            <div class="absolute inset-0 opacity-10">
+                <div class="absolute top-12 left-12 w-40 h-40 rounded-full bg-white"></div>
+                <div class="absolute bottom-12 right-12 w-56 h-56 rounded-full bg-white"></div>
+            </div>
+
+            <div class="relative z-10">
+                <h1 class="text-4xl font-bold leading-tight">
+                    Build Better Teams <br /> With Smart Project Management
+                </h1>
+
+                <p class="mt-5 text-slate-200 text-lg leading-relaxed">
+                    Create your workspace, invite team members, assign tasks, and manage projects efficiently.
+                </p>
+
+                <div class="mt-10 space-y-5">
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center">
+                            <i class="pi pi-users text-xl"></i>
+                        </div>
+                        <span class="text-lg">Team Collaboration</span>
+                    </div>
+
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center">
+                            <i class="pi pi-list-check text-xl"></i>
+                        </div>
+                        <span class="text-lg">Task Management</span>
+                    </div>
+
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center">
+                            <i class="pi pi-chart-line text-xl"></i>
+                        </div>
+                        <span class="text-lg">Progress Tracking</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Form -->
+        <div class="p-4 sm:p-6 lg:p-8 flex flex-col justify-center">
+
+            <!-- Header -->
+            <div class="text-center mb-8">
+                <div class="w-16 h-16 mx-auto rounded-2xl bg-cyan-700 flex items-center justify-center shadow-lg">
+                    <i class="pi pi-user-plus text-white text-2xl"></i>
+                </div>
+
+                <h2 class="mt-5 text-3xl font-bold text-slate-800">
+                    Create Account
+                </h2>
+
+                <p class="text-slate-500 mt-2">
+                    Join your team workspace and start managing projects
+                </p>
+            </div>
+
+            <!-- Form -->
+            <form (ngSubmit)="onRegistration()" class="space-y-3">
+
+                <!-- Name Row -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+
+                    <div>
+                        <label class="block text-sm font-medium text-slate-700">
+                            First Name
+                        </label>
+
+                        <div class="relative">
+                            <input [(ngModel)]="registerForm.firstName" name="firstName" type="text" placeholder="John" class="w-full h-11 sm:h-12 pl-8 pr-4 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-cyan-600 transition" />
+                            <i class="pi pi-user absolute left-2 top-1/2 -translate-y-1/2 text-slate-400"></i>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-slate-700">
+                            Last Name
+                        </label>
+
+                        <input [(ngModel)]="registerForm.secondName" name="secondName" type="text" placeholder="Doe" class="w-full h-11 sm:h-12 px-4 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-cyan-600 transition" />
+                    </div>
+                </div>
+
+                <!-- Email -->
+                <div>
+                    <label class="block text-sm font-medium text-slate-700">
+                        Email Address
+                    </label>
+                    <div class="relative">
+                        <input [(ngModel)]="registerForm.email" name="email" type="email" placeholder="Enter your email" class="w-full h-11 sm:h-12 pl-8 pr-8 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-cyan-600 transition" />
+                        <i class="pi pi-envelope absolute left-4 top-1/2 -translate-y-1/2 text-slate-400"></i>
+                    </div>
+                </div>
+
+                <!-- Role -->
+                <div>
+                    <label class="block text-sm font-medium text-slate-700">
+                        Select Role
+                    </label>
+
+                    <select [(ngModel)]="registerForm.role" name="role" class="w-full h-11 sm:h-12 px-4 rounded-xl border border-slate-200 bg-white focus:outline-none focus:ring-2 focus:ring-cyan-600 transition">
+                        <option disabled value="">...Select One...</option>
+                        <option value="project-manager">Project Manager</option>
+                        <option value="admin">Admin</option>
+                        <option value="employee">Employee</option>
+                        <option value="team-lead">Team Lead</option>
+                        <option value="hr">HR</option>
+                    </select>
+                </div>
+
+                <!-- Password -->
+                <div>
+                    <label class="block text-sm font-medium text-slate-700">
+                        Password
+                    </label>
+
+                    <div class="relative">
+                        <input [(ngModel)]="registerForm.password" name="password" [type]="showPassword? 'text':'password'" placeholder="Create password" class="w-full h-11 sm:h-12 pl-8 pr-8 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-cyan-600 transition"
+                        />
+                        <i (click)="togglePassword()" [class]="showPassword ? 'pi pi-eye-slash': 'pi pi-eye' " class="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 cursor-pointer">
+                        </i>
+                    </div>
+                </div>
+
+                <!-- Confirm Password -->
+                <div>
+                    <label class="block text-sm font-medium text-slate-700">
+                        Confirm Password
+                    </label>
+
+                    <div class="relative">
+                        <input [(ngModel)]="registerForm.confirmPassword" name="confirmPassword" type="password" placeholder="Confirm password" class="w-full h-11 sm:h-12 pl-8 pr-8 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-cyan-600 transition"
+                        />
+                        <i class="pi pi-shield absolute left-2 top-1/2 -translate-y-1/2 text-slate-400"></i>
+                    </div>
+                </div>
+
+                <!-- Terms -->
+                <label class="flex items-start gap-3 text-sm text-slate-600">
+                    <input [(ngModel)]="registerForm.term" name="term" type="checkbox"
+                        class="mt-1 rounded border-slate-300">
+                    <span>
+                        I agree to the
+                        <a class="text-cyan-700 font-medium">Terms & Conditions</a>
+                        and
+                        <a class="text-cyan-700 font-medium">Privacy Policy</a>
+                    </span>
+                </label>
+
+                <!-- Button -->
+                <button type="submit" class="w-full h-12 sm:h-14 rounded-xl bg-cyan-700 hover:bg-cyan-800 text-white font-semibold shadow-lg transition">
+                    Create Account
+                </button>
+
+            </form>
+
+            <!-- Footer -->
+            <div class="mt-4 text-center">
+                <p class="text-sm text-slate-500">
+                    Already have an account?
+                    <a routerLink="/login" class="text-cyan-700 font-semibold hover:text-cyan-800">
+                        Sign In
+                    </a>
+                </p>
+            </div>
+
+        </div>
+    </div>
+</div>

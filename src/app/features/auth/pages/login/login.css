@@ -1,0 +1,56 @@
+@keyframes pageOpen {
+    0% {
+        opacity: 0;
+        transform: scale(0.92) translateY(40px);
+        filter: blur(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+        filter: blur(0);
+    }
+}
+
+@keyframes slideLeftSmooth {
+    0% {
+        opacity: 0;
+        transform: translateX(80px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideRightSmooth {
+    0% {
+        opacity: 0;
+        transform: translateX(-80px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes floatingGlow {
+    0%,
+    100% {
+        transform: translateY(0px);
+        opacity: 0.15;
+    }
+    50% {
+        transform: translateY(-20px);
+        opacity: 0.3;
+    }
+}
+
+@keyframes logoFloat {
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-8px);
+    }
+}
