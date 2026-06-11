@@ -14,10 +14,10 @@ export class Sidebar {
   sideBar = [
     { icon: "🏠", routingName: "Dashboard", route: "/dashboard" },
     { icon: "📁", routingName: "Projects", route: "/projects-list" },
-    { icon: "📋", routingName: "Tasks", route: "task-list" },
-    { icon: "👥", routingName: "Team", route: "team-list" },
-    { icon: "🤝", routingName: "Clients", route: "" },
-    { icon: "📊", routingName: "Reaports", route: "" },
-    { icon: "⚙️", routingName: "Setting", route: "" },
+    { icon: "📋", routingName: "Tasks", route: "/task-list" },
+    { icon: "👥", routingName: "Team", route: "/team-list" },
+    { icon: "🤝", routingName: "Clients", route: "/clients-list" },
+    { icon: "📊", routingName: "Reaports", route: "/reaports" },
+    { icon: "⚙️", routingName: "Setting", route: "/setting" },
   ]
 }
