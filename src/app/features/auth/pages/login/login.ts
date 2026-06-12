@@ -1,10 +1,10 @@
 import { Component, inject } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
-import { ApiService } from '../../../../core/services/api-service';
 import { LoginUser } from '../../../../core/models/user.model';
 import { FormsModule } from '@angular/forms';
 import { CommonUtils } from '../../../../core/common.utils';
 import { ToastServcie } from '../../../../core/services/toast';
+import { AuthService } from '../../auth-service';
 
 @Component({
   selector: 'app-login',
@@ -13,7 +13,7 @@ import { ToastServcie } from '../../../../core/services/toast';
   styleUrl: './login.css',
 })
 export class Login {
-  private apiService = inject(ApiService)
+  private authService = inject(AuthService)
   private commonUit = new CommonUtils
   private route = inject(Router)
   showPassword: boolean = false
@@ -25,7 +25,7 @@ export class Login {
   }
 
   onLogin() {
-    this.apiService.onLogin(this.loginForm).subscribe({
+    this.authService.onLogin(this.loginForm).subscribe({
       next: (res: any) => {
         console.log("Success", res)
         localStorage.setItem(

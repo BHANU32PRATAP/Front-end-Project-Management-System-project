@@ -1,11 +1,11 @@
-import { Component, Inject, inject } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
-import { ApiService } from '../../../../core/services/api-service';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { RegisterUser } from '../../../../core/models/user.model';
 import { CommonUtils } from '../../../../core/common.utils';
 import { ToastServcie } from '../../../../core/services/toast';
+import { AuthService } from '../../auth-service';
 
 
 @Component({
@@ -16,7 +16,7 @@ import { ToastServcie } from '../../../../core/services/toast';
 })
 export class Register {
 
-  private apiService = inject(ApiService)
+  private authService = inject(AuthService)
   private commonUits = new CommonUtils()
   showPassword = false
   private route = inject(Router)
@@ -45,7 +45,7 @@ export class Register {
   }
 
   onRegistration() {
-    this.apiService.register(this.registerForm).subscribe({
+    this.authService.register(this.registerForm).subscribe({
       next: (res) => {
         console.log("Success", res)
 

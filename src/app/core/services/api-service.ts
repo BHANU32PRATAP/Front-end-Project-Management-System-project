@@ -8,14 +8,6 @@ export class ApiService {
   private http = inject(HttpClient)
   apiUrl = "http://localhost:5000/api"
 
-  register(userData: any) {
-    return this.http.post(`${this.apiUrl}/register`, userData)
-  }
-
-  onLogin(loginData: any) {
-    return this.http.post(`${this.apiUrl}/login`, loginData)
-  }
-
   // ///\\Project API's
   getTotalProject() {
     return this.http.get(`${this.apiUrl}/projects/project-list`)
