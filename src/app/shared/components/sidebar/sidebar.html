@@ -13,8 +13,9 @@
 
     <!-- Navigation -->
     <nav class="flex-1 overflow-y-auto px-4 py-6 space-y-2">
-        <a *ngFor="let item of sideBar" [routerLink]="item.route" routerLinkActive="bg-cyan-700 text-white " [routerLinkActiveOptions]="{exact:true}" class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-700 font-medium  transition-all duration-200 cursor-pointer">
-
+        <a *ngFor="let item of filterSideBar" [routerLink]="item.route" routerLinkActive="bg-cyan-700 text-white "
+            [routerLinkActiveOptions]="{exact:true}"
+            class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-700 font-medium  transition-all duration-200 cursor-pointer">
             <span>{{ item.icon }}</span>
             <span>{{ item.routingName }}</span>
         </a>
