@@ -1,9 +1,10 @@
-<div class="min-h-screen bg-slate-100 flex items-center justify-center">
+<div class="min-h-screen bg-slate-100 flex items-center justify-center p-4">
 
-    <div class="w-full max-w-6xl bg-white rounded-3xl shadow-2xl overflow-hidden grid lg:grid-cols-2">
+    <div class="w-full max-w-6xl min-h-[500px] bg-white rounded-3xl shadow-2xl overflow-hidden grid lg:grid-cols-2">
 
         <!-- Left Branding -->
-        <div class="hidden lg:flex flex-col justify-center bg-gradient-to-br from-cyan-700 to-slate-900 p-12 text-white relative overflow-hidden">
+        <div
+            class="hidden lg:flex flex-col justify-center bg-gradient-to-br from-cyan-700 to-slate-900 p-12 text-white relative overflow-hidden">
 
             <div class="absolute inset-0 opacity-10">
                 <div class="absolute top-12 left-12 w-40 h-40 rounded-full bg-white"></div>
@@ -45,15 +46,15 @@
         </div>
 
         <!-- Right Form -->
-        <div class="p-4 sm:p-6 lg:p-8 flex flex-col justify-center">
+        <div class="p-6 lg:p-8 flex flex-col justify-center overflow-y-auto">
 
             <!-- Header -->
-            <div class="text-center mb-8">
-                <div class="w-16 h-16 mx-auto rounded-2xl bg-cyan-700 flex items-center justify-center shadow-lg">
+            <div class="text-center mb-4">
+                <div class="w-12 h-12 mx-auto rounded-2xl bg-cyan-700 flex items-center justify-center shadow-lg">
                     <i class="pi pi-user-plus text-white text-2xl"></i>
                 </div>
 
-                <h2 class="mt-5 text-3xl font-bold text-slate-800">
+                <h2 class="mt-2 text-3xl font-bold text-slate-800">
                     Create Account
                 </h2>
 
@@ -74,8 +75,8 @@
                         </label>
 
                         <div class="relative">
-                            <input [(ngModel)]="registerForm.firstName" name="firstName" type="text" placeholder="John" class="w-full h-11 sm:h-12 pl-8 pr-4 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-cyan-600 transition" />
-                            <i class="pi pi-user absolute left-2 top-1/2 -translate-y-1/2 text-slate-400"></i>
+                            <input [(ngModel)]="registerForm.firstName" name="firstName" type="text" placeholder="John"
+                                class="w-full h-9 sm:h-11 pl-3 pr-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-cyan-600 transition" />
                         </div>
                     </div>
 
@@ -84,7 +85,8 @@
                             Last Name
                         </label>
 
-                        <input [(ngModel)]="registerForm.secondName" name="secondName" type="text" placeholder="Doe" class="w-full h-11 sm:h-12 px-4 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-cyan-600 transition" />
+                        <input [(ngModel)]="registerForm.secondName" name="secondName" type="text" placeholder="Doe"
+                            class="w-full h-9 sm:h-11 px-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-cyan-600 transition" />
                     </div>
                 </div>
 
@@ -94,8 +96,8 @@
                         Email Address
                     </label>
                     <div class="relative">
-                        <input [(ngModel)]="registerForm.email" name="email" type="email" placeholder="Enter your email" class="w-full h-11 sm:h-12 pl-8 pr-8 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-cyan-600 transition" />
-                        <i class="pi pi-envelope absolute left-4 top-1/2 -translate-y-1/2 text-slate-400"></i>
+                        <input [(ngModel)]="registerForm.email" name="email" type="email" placeholder="Enter your email"
+                            class="w-full h-9 sm:h-11 pl-2 pr-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-cyan-600 transition" />
                     </div>
                 </div>
 
@@ -105,7 +107,8 @@
                         Select Role
                     </label>
 
-                    <select [(ngModel)]="registerForm.role" name="role" class="w-full h-11 sm:h-12 px-4 rounded-xl border border-slate-200 bg-white focus:outline-none focus:ring-2 focus:ring-cyan-600 transition">
+                    <select [(ngModel)]="registerForm.role" name="role"
+                        class="w-full h-9 sm:h-11 px-3 rounded-xl border border-slate-200 bg-white focus:outline-none focus:ring-2 focus:ring-cyan-600 transition">
                         <option disabled value="">...Select One...</option>
                         <option value="project-manager">Project Manager</option>
                         <option value="admin">Admin</option>
@@ -122,9 +125,11 @@
                     </label>
 
                     <div class="relative">
-                        <input [(ngModel)]="registerForm.password" name="password" [type]="showPassword? 'text':'password'" placeholder="Create password" class="w-full h-11 sm:h-12 pl-8 pr-8 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-cyan-600 transition"
-                        />
-                        <i (click)="togglePassword()" [class]="showPassword ? 'pi pi-eye-slash': 'pi pi-eye' " class="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 cursor-pointer">
+                        <input [(ngModel)]="registerForm.password" name="password"
+                            [type]="showPassword? 'text':'password'" placeholder="Create password"
+                            class="w-full h-9 sm:h-11 pl-2 pr-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-cyan-600 transition" />
+                        <i (click)="togglePassword()" [class]="showPassword ? 'pi pi-eye-slash': 'pi pi-eye' "
+                            class="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 cursor-pointer">
                         </i>
                     </div>
                 </div>
@@ -136,9 +141,9 @@
                     </label>
 
                     <div class="relative">
-                        <input [(ngModel)]="registerForm.confirmPassword" name="confirmPassword" type="password" placeholder="Confirm password" class="w-full h-11 sm:h-12 pl-8 pr-8 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-cyan-600 transition"
-                        />
-                        <i class="pi pi-shield absolute left-2 top-1/2 -translate-y-1/2 text-slate-400"></i>
+                        <input [(ngModel)]="registerForm.confirmPassword" name="confirmPassword" type="password"
+                            placeholder="Confirm password"
+                            class="w-full h-9 sm:h-11 pl-2 pr-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-cyan-600 transition" />
                     </div>
                 </div>
 
@@ -155,14 +160,15 @@
                 </label>
 
                 <!-- Button -->
-                <button type="submit" class="w-full h-12 sm:h-14 rounded-xl bg-cyan-700 hover:bg-cyan-800 text-white font-semibold shadow-lg transition">
+                <button type="submit"
+                    class="w-full h-10 sm:h-11 rounded-xl bg-cyan-700 hover:bg-cyan-800 text-white font-semibold shadow-lg transition">
                     Create Account
                 </button>
 
             </form>
 
             <!-- Footer -->
-            <div class="mt-4 text-center">
+            <div class="mt-2 text-center">
                 <p class="text-sm text-slate-500">
                     Already have an account?
                     <a routerLink="/login" class="text-cyan-700 font-semibold hover:text-cyan-800">
