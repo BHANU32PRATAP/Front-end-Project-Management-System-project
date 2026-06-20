@@ -7,8 +7,10 @@ import { inject, Injectable } from '@angular/core';
 export class ApiService {
   private http = inject(HttpClient)
   apiUrl = "http://localhost:5000/api"
+  // apiUrl = "https://backend-project-management-system-project.onrender.com/api"
 
-  // ///\\Project API's
+
+  //////////Project API's
   getTotalProject() {
     return this.http.get(`${this.apiUrl}/projects/project-list`)
   }

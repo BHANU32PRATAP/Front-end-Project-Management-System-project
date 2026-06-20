@@ -26,6 +26,7 @@ export class Register {
     "firstName": "",
     "secondName": "",
     "email": "",
+    "workProfile": "",
     "password": "",
     "confirmPassword": "",
     "role": "",
@@ -37,6 +38,7 @@ export class Register {
       "firstName": "",
       "secondName": "",
       "email": "",
+      "workProfile": "",
       "password": "",
       "confirmPassword": "",
       "role": "",
@@ -65,13 +67,13 @@ export class Register {
 
       },
       error: (error) => {
-        this.tostService.error("Invalid Email or Password")
+        this.tostService.error(error.error.message)
         console.log("Error", error)
       }
     })
   }
 
-
+  
   togglePassword() {
     this.showPassword = this.commonUits.isVisiblePassword(
       this.showPassword

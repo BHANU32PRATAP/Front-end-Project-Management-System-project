@@ -41,3 +41,10 @@ __screenshots__/
 # System files
 .DS_Store
 Thumbs.db
+
+
+git status
+git add .
+git commit -m "Add vercel routing"
+git push origin main
+https://vercel.com/bhanupratapoct1998-9725s-projects/front-end-project-management-system-project

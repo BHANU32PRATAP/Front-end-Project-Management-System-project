@@ -2,7 +2,8 @@
 
     <!-- Left -->
     <div class="flex items-center gap-4">
-        <button class="w-11 h-11 rounded-xl border border-slate-200 hover:bg-slate-100 flex items-center justify-center text-xl">
+        <button
+            class="w-11 h-11 rounded-xl border border-slate-200 hover:bg-slate-100 flex items-center justify-center text-xl">
             ☰
         </button>
 
@@ -19,36 +20,27 @@
     <!-- Right -->
     <div class="flex items-center gap-2 sm:gap-3">
 
-        <button class="w-11 h-11 rounded-xl border border-slate-200 hover:bg-slate-100 flex items-center justify-center">
+        <button
+            class="w-11 h-11 rounded-xl border border-slate-200 hover:bg-slate-100 flex items-center justify-center">
             🌙
         </button>
 
-        <button class="relative w-11 h-11 rounded-xl border border-slate-200 hover:bg-slate-100 flex items-center justify-center">
+        <button
+            class="relative w-11 h-11 rounded-xl border border-slate-200 hover:bg-slate-100 flex items-center justify-center">
             🔔
             <span class="absolute top-2.5 right-2.5 w-2 h-2 bg-red-500 rounded-full"></span>
         </button>
 
-        <div class="hidden md:flex items-center gap-3 pl-3 pr-4 py-2 rounded-2xl border border-slate-200 hover:bg-slate-50">
-            <div class="w-11 h-11 rounded-full bg-gradient-to-r from-indigo-600 to-purple-600 flex items-center justify-center text-white font-semibold">
-                BP
-            </div>
-
+        <div
+            class="hidden md:flex items-center gap-3 pl-3 pr-4 py-2 rounded-2xl border border-slate-200 hover:bg-slate-50">
             <div>
                 <div class="text-sm font-semibold text-slate-800">
-                    Bhanu Pratap
+                    {{userDetails.firstName}} {{userDetails.secondName}}
                 </div>
                 <div class="text-xs text-slate-500">
-                    Frontend Developer
+                    <!-- {{userDetails}} -->
                 </div>
             </div>
         </div>
-
-        <button routerLink="/login" class="hidden sm:flex h-11 px-5 rounded-xl border border-slate-300 text-slate-700 hover:bg-slate-100 items-center font-medium">
-            Login
-        </button>
-
-        <button class="h-11 px-5 rounded-xl bg-red-500 hover:bg-red-600 text-white font-medium shadow-sm">
-            Logout
-        </button>
     </div>
 </nav>

@@ -3,6 +3,7 @@ export interface RegisterUser {
     firstName: string,
     secondName: string,
     email: string,
+    workProfile: string,
     password: string,
     confirmPassword: string,
     role: string,

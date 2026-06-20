@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
-import { RouterLink, RouterLinkActive } from '@angular/router';
+import { Component, inject } from '@angular/core';
+import { Router, RouterLink, RouterLinkActive } from '@angular/router';
 import { it } from 'node:test';
 
 @Component({
@@ -12,6 +12,8 @@ import { it } from 'node:test';
 export class Sidebar {
 
   userRole = JSON.parse(localStorage.getItem("userData")!).role
+  private router = inject(Router)
+
   sideBar = [
     {
       icon: "🏠",
@@ -60,5 +62,16 @@ export class Sidebar {
   filterSideBar = this.sideBar.filter((item) => {
     return item.roles.includes(this.userRole)
   })
+
+
+  get userLoggedIn(): boolean {
+    return !!localStorage.getItem("token")
+  }
+
+  logout() {
+    localStorage.removeItem("token")
+    localStorage.removeItem("userData");
+    this.router.navigate(["/login"])
+  }
 
 }

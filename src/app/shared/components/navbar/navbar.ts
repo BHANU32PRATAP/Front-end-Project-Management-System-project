@@ -1,12 +1,21 @@
 import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
-  imports: [RouterLink],
+  imports: [],
   templateUrl: './navbar.html',
   styleUrl: './navbar.css',
 })
 export class Navbar {
+
+  userDetails: any = {}
+
+  ngOnInit() {
+    this.userDetails = JSON.parse(localStorage.getItem("userData") || "{}")
+    console.log(this.userDetails)
+  }
+
+
+
 
 }
