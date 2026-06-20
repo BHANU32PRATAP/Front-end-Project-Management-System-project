@@ -11,6 +11,8 @@ export class AuthService {
   apiUrl = this.apService.apiUrl
 
   register(userData: any) {
+    console.log(this.apiUrl)
+    console.log(`${this.apiUrl}/register`);
     return this.http.post(`${this.apiUrl}/register`, userData)
   }
 
